@@ -1,0 +1,7 @@
+C:\Users\17203\source\repos\JalenHurtsAlexaStatistics\JalenHurtsAlexaStatistics\bin\Debug\netcoreapp2.1\JalenHurtsAlexaStatistics.deps.json
+C:\Users\17203\source\repos\JalenHurtsAlexaStatistics\JalenHurtsAlexaStatistics\bin\Debug\netcoreapp2.1\JalenHurtsAlexaStatistics.runtimeconfig.json
+C:\Users\17203\source\repos\JalenHurtsAlexaStatistics\JalenHurtsAlexaStatistics\bin\Debug\netcoreapp2.1\JalenHurtsAlexaStatistics.runtimeconfig.dev.json
+C:\Users\17203\source\repos\JalenHurtsAlexaStatistics\JalenHurtsAlexaStatistics\bin\Debug\netcoreapp2.1\JalenHurtsAlexaStatistics.dll
+C:\Users\17203\source\repos\JalenHurtsAlexaStatistics\JalenHurtsAlexaStatistics\obj\Debug\netcoreapp2.1\JalenHurtsAlexaStatistics.csprojAssemblyReference.cache
+C:\Users\17203\source\repos\JalenHurtsAlexaStatistics\JalenHurtsAlexaStatistics\obj\Debug\netcoreapp2.1\JalenHurtsAlexaStatistics.AssemblyInfoInputs.cache
+C:\Users\17203\source\repos\JalenHurtsAlexaStatistics\JalenHurtsAlexaStatistics\obj\Debug\netcoreapp2.1\JalenHurtsAlexaStatistics.AssemblyInfo.cs
