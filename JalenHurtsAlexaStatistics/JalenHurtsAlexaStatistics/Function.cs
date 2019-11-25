@@ -16,7 +16,7 @@ namespace JalenHurtsAlexaStatistics
 {
     public class Function
     {
-        
+
         /// <summary>
         /// A simple function that takes a string and does a ToUpper
         /// </summary>
@@ -51,27 +51,26 @@ namespace JalenHurtsAlexaStatistics
                 if (intent.Intent.Name.Equals("JalenIntent"))
                 {
                     var WeekRequested = intent.Intent.Slots["weekNumber"].Value;
-                    
-                    if(WeekRequested == null)
+
+                    if (WeekRequested == null)
                     {
                         return BodyResponse("I did not understand that, please try again", false);
                     }
                 }
+                else if (intent.Intent.Name.Equals("AMAZON.stopIntent"))
+                {
+                    return BodyResponse("You have now exited the Jalen Hurts Statistics Library", true);
+                }
             }
-            else if (intent.Intent.Name.Equals("AMAZON.stopIntent"))
-            {
-                return BodyResponse("You have now existed the Jalen Hurts Statistics Library", true);
-            }
-            else
-            {
-                return BodyResponse("I do not know this, please try again", false);
-            }
+            
+            return BodyResponse("I do not know this, please try again", false);
+
 
         }
 
         private SkillResponse BodyResponse(string outputSpeech,
                 bool ShouldEndSession,
-                string repromptText = "Just say, tell me week one to hear his statistics against Houston, and so on. To exit, say exit.")
+                string repromptText = "Just say, tell me week one to hear his statistics against for his week one game against Houston, and so on. To exit, say exit.")
         {
             var response = new ResponseBody
             {
@@ -92,7 +91,7 @@ namespace JalenHurtsAlexaStatistics
             return skillResponse;
         }
 
-        
+
 
 
     }
