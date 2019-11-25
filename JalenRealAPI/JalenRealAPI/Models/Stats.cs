@@ -12,8 +12,11 @@ namespace JalenRealAPI.Models
         public int TDs { get; set; }
         public string opponent { get; set; }
         public int weeknumber { get; set; }
+        public int Passingyards { get; internal set; }
+        public int Rushingyards { get; internal set; }
+        public string Opponent { get; internal set; }
 
-        public Stat()
+        public Stats()
         {
             RushingYards = 0;
             PassingYards = 0;
@@ -21,7 +24,14 @@ namespace JalenRealAPI.Models
             opponent = String.Empty;
             weeknumber = 0;
         }
-        public
+        public Stats(int rushing, int passing, int TD, string Opponent, int WkNum)
+        {
+            RushingYards = rushing;
+            PassingYards = passing;
+            TDs = TD;
+            Opponent = opponent;
+            WkNum = weeknumber;
+        }
 
     }
 }
