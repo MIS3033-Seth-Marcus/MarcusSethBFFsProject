@@ -61,11 +61,16 @@ namespace JalenHurtsAlexaStatistics
                 {
                     return BodyResponse("You have now exited the Jalen Hurts Statistics Library", true);
                 }
-            }
-            
+                
+            }       
             return BodyResponse("I do not know this, please try again", false);
 
+             var stats = await JalenRealAPI(  , context)
+            {
+                outputText = $"In 
+            }
 
+            return BodyResponse(outputText, true);
         }
 
         private SkillResponse BodyResponse(string outputSpeech,
