@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\17203\\source\\repos\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics.csproj": {}
+    "C:\\Users\\17203\\Source\\Repos\\MIS3033-Seth-Marcus\\MarcusSethBFFsProject\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\17203\\source\\repos\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics.csproj": {
+    "C:\\Users\\17203\\Source\\Repos\\MIS3033-Seth-Marcus\\MarcusSethBFFsProject\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\17203\\source\\repos\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics.csproj",
+        "projectUniqueName": "C:\\Users\\17203\\Source\\Repos\\MIS3033-Seth-Marcus\\MarcusSethBFFsProject\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics.csproj",
         "projectName": "JalenHurtsAlexaStatistics",
-        "projectPath": "C:\\Users\\17203\\source\\repos\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics.csproj",
+        "projectPath": "C:\\Users\\17203\\Source\\Repos\\MIS3033-Seth-Marcus\\MarcusSethBFFsProject\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics.csproj",
         "packagesPath": "C:\\Users\\17203\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\17203\\source\\repos\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\obj\\",
+        "outputPath": "C:\\Users\\17203\\Source\\Repos\\MIS3033-Seth-Marcus\\MarcusSethBFFsProject\\JalenHurtsAlexaStatistics\\JalenHurtsAlexaStatistics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\17203\\AppData\\Roaming\\NuGet\\NuGet.Config",
