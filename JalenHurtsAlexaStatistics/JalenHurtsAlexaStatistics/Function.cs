@@ -31,7 +31,7 @@ namespace JalenHurtsAlexaStatistics
             });
             WeeklyStats.Add(2, new Stats()
             {
-                Opponent = "South Dakota",
+                Opponent = "South Dakota",    
                 Rushingyards = 47,
                 Passingyards = 259,
                 TDs = 3
