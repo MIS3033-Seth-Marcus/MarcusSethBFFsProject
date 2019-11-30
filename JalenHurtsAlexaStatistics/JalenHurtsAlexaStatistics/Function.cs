@@ -142,8 +142,8 @@ namespace JalenHurtsAlexaStatistics
                 
             }
 
-            
-            var weeklyStats = await GetStats(WeekRequested)
+
+            var weeklyStats = await GetStats(WeekRequested);
             
 
             return BodyResponse("I do not know this, please try again", false);
