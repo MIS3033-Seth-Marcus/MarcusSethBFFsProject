@@ -20,24 +20,38 @@ namespace JalenHurtsAlexaStatistics
         public async Task<SkillResponse> FunctionHandler(SkillRequest input, ILambdaContext context)
         {
 
-            Dictionary<int, Stats> WeeklyStats = new Dictionary<int, Stats>();
+            Dictionary<string, Stats> WeeklyStats = new Dictionary<string, Stats>();
+            
+            string one = string.Empty;
+            string two = string.Empty;
+            string three = string.Empty;
+            string four = string.Empty;
+            string five = string.Empty;
+            string six = string.Empty;
+            string seven = string.Empty;
+            string eight = string.Empty;
+            string nine = string.Empty;
+            string ten = string.Empty;
+            string eleven = string.Empty;
+            string twelve = string.Empty;
+            string thirteen = string.Empty;
 
-            WeeklyStats.Add(1, new Stats()
+            WeeklyStats.Add(one, new Stats()
             {
                 Opponent = "Houston",
                 Rushingyards = 176,
                 Passingyards = 332,
                 TDs = 6
             });
-            WeeklyStats.Add(2, new Stats()
+            WeeklyStats.Add(two, new Stats()
             {
-                Opponent = "South Dakota",    
+                Opponent = "South Dakota",
                 Rushingyards = 47,
                 Passingyards = 259,
                 TDs = 3
             });
 
-            WeeklyStats.Add(3, new Stats()
+            WeeklyStats.Add(three, new Stats()
             {
                 Opponent = "UCLA",
                 Rushingyards = 150,
@@ -45,12 +59,12 @@ namespace JalenHurtsAlexaStatistics
                 TDs = 4
             });
 
-            WeeklyStats.Add(4, new Stats()
+            WeeklyStats.Add(four, new Stats()
             {
 
             });
 
-            WeeklyStats.Add(5, new Stats()
+            WeeklyStats.Add(five, new Stats()
             {
                 Opponent = "Texas Tech",
                 Rushingyards = 70,
@@ -58,53 +72,53 @@ namespace JalenHurtsAlexaStatistics
                 TDs = 4
 
             });
-            WeeklyStats.Add(6, new Stats()
+            WeeklyStats.Add(six, new Stats()
             {
                 Opponent = "Kansas",
                 Rushingyards = 56,
                 Passingyards = 228,
                 TDs = 4
             });
-            WeeklyStats.Add(7, new Stats()
+            WeeklyStats.Add(seven, new Stats()
             {
                 Opponent = "Texas",
                 Rushingyards = 131,
                 Passingyards = 235,
                 TDs = 4
             });
-            WeeklyStats.Add(8, new Stats()
+            WeeklyStats.Add(eight, new Stats()
             {
                 Opponent = "West Virginia",
                 Rushingyards = 75,
                 Passingyards = 316,
                 TDs = 5
             });
-            WeeklyStats.Add(9, new Stats()
+            WeeklyStats.Add(nine, new Stats()
             {
                 Opponent = "Kansas State",
                 Rushingyards = 96,
                 Passingyards = 395,
                 TDs = 4
             });
-            WeeklyStats.Add(10, new Stats()
+            WeeklyStats.Add(ten, new Stats()
             {
 
             });
-            WeeklyStats.Add(11, new Stats()
+            WeeklyStats.Add(eleven, new Stats()
             {
                 Opponent = "Iowa State",
                 Rushingyards = 68,
                 Passingyards = 273,
                 TDs = 5
             });
-            WeeklyStats.Add(12, new Stats()
+            WeeklyStats.Add(twelve, new Stats()
             {
                 Opponent = "Baylor",
                 Rushingyards = 114,
                 Passingyards = 297,
                 TDs = 4
             });
-            WeeklyStats.Add(13, new Stats()
+            WeeklyStats.Add(thirteen, new Stats()
             {
                 Opponent = "TCU",
                 Rushingyards = 173,
@@ -118,12 +132,12 @@ namespace JalenHurtsAlexaStatistics
 
             if (requestType == typeof(LaunchRequest))
             {
-                return BodyResponse("Welcome to the Jalen Hurts Stats Library, please say which week you would like to hear his stats!", false);
+                return BodyResponse("Welcome to the Jalen Hurts Stats Library, please say which week you would like to hear his stats! To exit, say exit.", false);
             }
             else if (requestType == typeof(IntentRequest))
             {
                 var intent = input.Request as IntentRequest;
-                
+
 
                 if (intent.Intent.Name.Equals("JalenIntent"))
                 {
@@ -133,25 +147,15 @@ namespace JalenHurtsAlexaStatistics
                     {
                         return BodyResponse("I did not understand that, please try again", false);
                     }
+                    
                 }
                 else if (intent.Intent.Name.Equals("AMAZON.stopIntent"))
                 {
                     return BodyResponse("You have now exited the Jalen Hurts Statistics Library", true);
                 }
 
-                
+
             }
-
-
-            var weeklyStats = await GetStats(WeekRequested);
-            
-
-            return BodyResponse("I do not know this, please try again", false);
-
-            
-
-            //NEED TO CONVERT USER RESPONSE INTO INTEGER
-            //NEED TO DEVELOP IF STATEMENTS ABOUT USER RESPONSES AND WHAT ALEXA WILL RESPOND BACK
 
         }
 
@@ -159,7 +163,7 @@ namespace JalenHurtsAlexaStatistics
 
         private SkillResponse BodyResponse(string outputSpeech,
                 bool ShouldEndSession,
-                string repromptText = "Just say, tell me week one to hear his statistics against for his week one game against Houston, and so on. To exit, say exit.")
+                string repromptText = "I didn't understand that. Just say, tell me week one to hear his statistics against for his week one game against Houston, and so on.")
         {
             var response = new ResponseBody
             {
@@ -180,11 +184,26 @@ namespace JalenHurtsAlexaStatistics
             return skillResponse;
         }
 
+        public static WeekResponse(SkillRequest input, ILambdaContext context)
+        {
+            var intent = input.Request as IntentRequest;
+            string response;
+            var WeekRequested = intent.Intent.Slots["weekNumber"].Value;
+            
+
+            if (WeekRequested == "one" || WeekRequested == "two" || WeekRequested == "three" || WeekRequested == "five" || WeekRequested == "six" || WeekRequested == "seven" || WeekRequested == "eight" || WeekRequested == "nine" || WeekRequested == "eleven" || WeekRequested == "twelve" || WeekRequested == "thirteen")
+            {
+                response = $"In week {WeekRequested}, against {WeeklyStats.Opponent}, Jalen had {WeeklyStats.Passingyards} passing yards, {WeeklyStats.Rushingyards} rushing yards and {WeeklyStats.TDs} Touchdowns.";
+            }
+            else if ( WeekRequested == "four" || WeekRequested == "ten")
+            {
+                response = "Jalen did not play this week, Oklahoma had a bye.";
+            }
+
+            return response;
+        }
 
 
-
-
-        private static HttpClient httpClient;
     }
     public class Stats
     {
@@ -192,11 +211,10 @@ namespace JalenHurtsAlexaStatistics
         public int RushingYards { get; set; }
         public int PassingYards { get; set; }
         public int TDs { get; set; }
-        public string opponent { get; set; }
+        public string Opponent { get; set; }
         public int weeknumber { get; set; }
         public int Passingyards { get; internal set; }
         public int Rushingyards { get; internal set; }
-        public string Opponent { get; internal set; }
 
 
 
